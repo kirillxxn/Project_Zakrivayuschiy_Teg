@@ -1,20 +1,430 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
-
-*/
-
+/* Начало основного блока мобильной версии */
 .page {
+  display: grid;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image: var(--background-image);
+  background-size: cover;
+  background-attachment: fixed;
+  padding-block-start: 100px;
 }
+
+.header {
+  color: var(--accent-color, #000);
+  background-color: var(--background-color, #fff);
+  border: var(--border-size, 2px) var(--border-color, #000) solid;
+  margin-block-end: 102px;
+}
+
+.title_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 21px;
+  font-family: var(--font-family-PS2P, 'Press Start 2P', sans-serif);
+  font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-transform: uppercase;
+  padding-block-start: 120px;
+  margin-block-end: 23px;
+
+}
+
+.title {
+  font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+  font-weight: 400;
+  line-height: 49px;
+  letter-spacing: 0em;
+}
+
+.header__theme-menu {
+  margin-block-end: 20px;
+}
+
+.theme-menu__list {
+  display: grid;
+  gap: 9px;
+  padding-inline-start: 20px;
+  justify-content: space-around;
+}
+
+.theme-menu__button {
+  font-family: var(--font-family-PS2P, 'Press Start 2P', sans-serif);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.container {
+  display: grid;
+  gap: 51px;
+  color: var(--accent-color, #000);
+}
+
+.card_list {
+  display: grid;
+  border: var(--border-size, 2px) var(--border-color, #000) solid;
+  ;
+}
+
+.card_title {
+  font-family: var(--font-family-Inter, 'Inter', sans-serif);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0em;
+  text-align: left;
+  background-color: var(--background-color, #fff);
+  padding: 4px 10px;
+  border-bottom: var(--border-size, 2px) var(--border-color, #000) solid;
+  ;
+}
+
+.card_list_image {
+  position: relative;
+}
+
+.card_image {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.card_label {
+  top: 25px;
+  right: 10px;
+  position: absolute;
+  color: #000;
+  font-family: var(--font-family-PS2P, 'Press Start 2P', sans-serif);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-shadow: 0 0 2px #fff;
+  mix-blend-mode: hard-light;
+}
+
+@supports ((text-stroke: 1px var(--border-label-color, #fff)) or (-webkit-text-stroke: 0.3px var(--border-label-color, #fff))) {
+  .card_label {
+    -webkit-text-stroke: 0.3px var(--border-label-color, #fff);
+    text-stroke: 0.3px var(--border-label-color, #fff);
+    text-shadow: none;
+  }
+}
+
+.card_section {
+  display: flex;
+  flex-direction: column;
+  padding: 23px 25px 26px;
+  gap: 27px;
+  background-color: var(--background-color, #fff);
+  border-top: var(--border-size, 2px) var(--border-color, #000) solid;
+  ;
+}
+
+.card_text {
+  font-family: var(--font-family-Inter, 'Inter', sans-serif);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.card__buttons {
+  display: flex;
+  background-color: var(--background-color, #fff);
+  justify-content: flex-end;
+  padding: 0 23px 23px;
+  gap: 8px;
+
+}
+
+.card__icon-button {
+  background-color: transparent;
+  border: 2px solid transparent;
+  padding: 0px;
+  transition: outline 0.3s ease;
+}
+
+
+.like-icon {
+  cursor: pointer;
+}
+
+.card__like-button {
+  padding: 11px 35px;
+  background-color: transparent;
+}
+
+.button__text {
+  position: relative;
+  font-family: var(--font-family-PS2P, 'Press Start 2P', sans-serif);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: 0em;
+  text-align: left;
+  mix-blend-mode: difference;
+}
+
+.button {
+  cursor: pointer;
+  border: var(--border-size, 2px) var(--accent-color-two, #fff) solid;
+  background-color: var(--button-bg-two, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  mix-blend-mode: difference;
+  color: var(--accent-color-two, #fff);
+  transition: box-shadow 0.3s ease;
+}
+
+.footer {
+  margin: 50px 32px 102px 34px;
+  background-color: var(--background-color, #fff);
+
+}
+
+.footer_button {
+  padding: 12px 17px;
+  border: var(--border-size, 2px) var(--accent-color-two, #fff) solid;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+
+}
+
+.footer_floppy {
+  mix-blend-mode: difference;
+  block-size: 28px;
+  inline-size: 28px;
+}
+
+.footer_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.dialog {
+  max-inline-size: 336px;
+  border: var(--border-size, 2px) var(--accent-color-two, #fff) solid;
+  display: grid;
+  gap: 30px;
+  background-color: var(--background-color, #fff);
+  padding: 30px 34px 28px 40px;
+  color: var(--accent-color-two, #fff);
+}
+
+.dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+}
+
+.dialog_menu {
+  display: flex;
+  align-items: center;
+  gap: 19px;
+
+}
+
+.dialog_floppy {
+  mix-blend-mode: difference;
+  min-inline-size: 39px;
+  block-size: 39px;
+
+}
+
+.dialog_text {
+  mix-blend-mode: difference;
+  font-family: var(--font-family-PS2P, 'Press Start 2P', sans-serif);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0em;
+
+  text-transform: uppercase;
+
+}
+
+
+.button_ok {
+  width: 257px;
+  text-transform: uppercase;
+  font-family: var(--font-family-PS2P, 'Press Start 2P', sans-serif);
+  font-size: 14px;
+  line-height: 13px;
+  letter-spacing: 0em;
+  padding: 10.5px 0px;
+  background-color: transparent;
+  border: var(--border-size, 2px) var(--accent-color-two, #fff) solid;
+
+}
+
+.button_key_ok {
+  color: var(--accent-color-two, #fff);
+  mix-blend-mode: difference;
+}
+
+/* Конец основного блока мобильной версии */
+
+/* Начало блока с фильтрами карточек */
+.filter_one {
+  filter: grayscale(0.9);
+}
+
+.filter_two {
+  filter: contrast(50)
+}
+
+.filter_three {
+  filter: hue-rotate(-90deg);
+}
+
+.filter_four {
+  filter: saturate(200%);
+}
+
+.filter_five {
+  filter: sepia(2);
+}
+
+.filter_six {
+  filter: invert(1);
+}
+
+.filter_seven {
+  filter: brightness(3);
+}
+
+.filter_eight {
+  filter: blur(4px) sepia(1) invert(2);
+}
+
+/* Конец блока с фильтрами карточек */
+
+/* Начало блока с псевдоэлементами и псевдоклассами */
+.theme-menu__button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.theme-menu__button:focus {
+  outline: none;
+  border: none;
+}
+
+.theme-menu__button:disabled {
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--border-color, #000);
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.button:hover {
+  color: var(--accent-color-two, #fff);
+  transition: color 0.3s ease-in-out;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: var(--button-bg-one, #fff);
+  transition: 0.3s ease-in-out;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 2px 2px var(--accent-color-two, #fff);
+}
+
+.button:hover:before {
+  transform: translateX(100%);
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.7);
+}
+
+/* Конец блока с псевдоэлементами и псевдоклассами */
+/* Начало адаптивного блока */
+@media (width > 376px) {
+  .page {
+    max-width: 700px;
+  }
+
+  .title_section {
+    padding-block-start: 136px;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 23px;
+  }
+
+  .title {
+    font-size: 65px;
+    line-height: 65px;
+  }
+
+  .card_label {
+    top: 27px;
+    right: 25px;
+  }
+
+  .footer {
+    margin: 50px 181px 107px 180px;
+
+  }
+
+  .footer_button {
+    padding: 14px 19px;
+
+  }
+
+  .footer_floppy {
+    block-size: 21px;
+    inline-size: 21px;
+  }
+
+  .footer_menu {
+    flex-direction: row;
+
+  }
+}
+
+.dialog {
+  max-inline-size: 357px
+}
+
+.button_ok {
+  width: 279px;
+}
+
+
+/* Конец адаптивного блока */

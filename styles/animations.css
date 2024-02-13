@@ -1,14 +1,140 @@
-/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
+@keyframes heartscale {
+  0% {
+    transform: scale(1);
+  }
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
+  100% {
+    transform: scale(1.5);
+  }
+}
 
-Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
-*/
+.like-icon.is-liked .heart_sparks {
+  animation: heartsparks 0.3s ease-in 0.3s 1 alternate;
+  ;
+}
+
+@keyframes heartsparks {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pointer {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-4px);
+  }
+}
+
+/*  Начало блока анимации стрелки в главном меню */
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  animation: pointer 0.5s ease-in-out alternate infinite;
+  left: -12px;
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+  transform: 0.3s ease;
+}
+
+.theme-menu__button:not(:disabled)::after {
+  content: "";
+  display: block;
+  background: currentColor;
+  transition: 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  height: 2px;
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible::after {
+  opacity: 0.6;
+  transform: scaleX(1);
+}
+
+/*  Конец блока анимации стрелки в главном меню */
+
+/* Начало блока анимации сердца */
+.like-icon {
+  .heart_core {
+    fill: transparent;
+    transition: fill 0.3s linear 0.03s;
+  }
+
+  .heart_body {
+    fill: transparent;
+    transition: fill 0.3s linear;
+  }
+
+  .heart_contour {
+    fill: var(--heart-blackgreen);
+    transition: fill 0.1s linear;
+  }
+
+  .heart_sparks {
+    opacity: 0;
+  }
+
+  .heart {
+    transform-origin: center;
+  }
+}
+
+.like-icon:hover {
+  .heart_core {
+    fill: var(--heart-blackgreen);
+    transition: fill 0.3s linear;
+  }
+
+  .heart_body {
+    fill: var(--heart-blackgreen);
+    transition: fill 0.3s linear 0.05s;
+  }
+}
+
+.like-icon:active {
+  .heart_core {
+    fill: red;
+    transition: fill 0.3s linear;
+  }
+
+  .heart_body {
+    fill: red;
+    transition: fill 0.3s linear 0.05s;
+  }
+
+  .heart {
+    transform-origin: center;
+  }
+}
+
+.like-icon.is-liked .heart_core {
+  fill: red;
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .heart_body {
+  fill: red;
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .heart_contour {
+  fill: red;
+  transition: fill 0.6s linear
+}
+
+.like-icon.is-liked .heart {
+  animation: heartscale 0.3s ease-in 0.1s 1 alternate;
+}
+
+/* Конец блока анимации сердца */

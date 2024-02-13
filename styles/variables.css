@@ -1,1 +1,17 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+    --accent-color: #000;
+    --accent-color-two: #fff;
+    --background-color: #fff;
+    --border-color: #000;
+    --border-label-color: #fff;
+    --border-transparent: transparent;
+    --border-size: 2px;
+    --button-bg-one: #fff;
+    --button-bg-two: #000;
+    --font-family-Inter: Inter, sans-serif;
+    --font-family-PS2P: 'Press Start 2P', sans-serif;
+    --heart-blackgreen: #000;
+    --background-image: repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
+      repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
+      linear-gradient(#e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
+  }
