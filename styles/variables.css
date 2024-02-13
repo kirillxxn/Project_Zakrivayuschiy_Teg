@@ -10,6 +10,8 @@
     --button-bg-two: #000;
     --font-family-Inter: Inter, sans-serif;
     --font-family-PS2P: 'Press Start 2P', sans-serif;
+    --font-weight-bold: 700;
+    --font-weight-normal: 400;
     --heart-blackgreen: #000;
     --background-image: repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
       repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
