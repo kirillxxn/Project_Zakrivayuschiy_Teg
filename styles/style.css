@@ -416,7 +416,7 @@
     flex-direction: row;
 
   }
-}
+
 
 .dialog {
   max-inline-size: 357px
@@ -425,6 +425,6 @@
 .button_ok {
   width: 279px;
 }
-
+}
 
 /* Конец адаптивного блока */
