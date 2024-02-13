@@ -262,7 +262,6 @@
       <button 
         type="button" 
         onclick="window['dialog-id'].showModal()" 
-        aria-controls="dialog-id"
         class="footer_button button"
         >
         <span class="button__text footer_menu ">
@@ -282,12 +281,13 @@
           дискету, чтобы продолжить
         </h2>
       </div>
-      <form method="dialog">
-        <button class="button_ok button"
+        <button 
+        type="button"
+        onclick="window['dialog-id'].close()"
+        class="button_ok button"
           >
         <span class="button_key_ok">ок</span>
         </button>
-        </form>
     </dialog>
     <script src="./scripts/like.js"></script>
   </body>
