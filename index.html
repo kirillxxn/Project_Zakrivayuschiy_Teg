@@ -261,8 +261,9 @@
     <footer class="footer">
       <button 
         type="button" 
-        onclick="window['dialog-id'].showModal()" 
+        onclick="window['dialog-id'].showModal()"
         class="footer_button button"
+        aria-controls="dialog-id"
         >
         <span class="button__text footer_menu ">
           <svg class="footer_floppy" viewBox="0 0 28 28">
@@ -282,7 +283,7 @@
         </h2>
       </div>
       <form method="dialog">
-        <button class="button_ok button"
+        <button class="button_ok button" type="submit"
           >
         <span class="button_key_ok">ок</span>
         </button>
