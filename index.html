@@ -18,10 +18,12 @@
   </head>
   <body class="page">
     <header class="header">
+      <div class="header_menu">
+      <a class="logo">&lt;/html&gt;</a>
       <h1 class="title_section">
-        <span class="title">&lt;/html&gt;</span>
         закрывающий тег
       </h1>
+    </div>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -49,10 +51,11 @@
       </nav>
     </header>
     <main class="container">
+      <section class="card_list_section">
       <article class="card_list">
         <h2 class="card_title">Фритрек и нулевой спринт: Подготовка к работе</h2>
         <div class="card_list_image">
-          <img class="card_image filter_one" src="./images/card_image/card_image.png" alt="Картинка автобуса среди леса, с эффектом серого цвета">
+          <img class="card_image filter_grayscale" src="./images/card_image/card_image.png" alt="Картинка автобуса среди леса, с эффектом серого цвета" loading="lazy">
           <span class="card_label">&lt;/HTML&gt;</span>
         </div>
         <div class="card_section">
@@ -78,7 +81,7 @@
       <article class="card_list">
         <h2 class="card_title">1 спринт: Я — чистый лист</h2>
         <div class="card_list_image">
-          <img class="card_image filter_two" src="./images/card_image/card_image.png" alt="Картинка автобуса среди леса, с эффектом контраста">
+          <img class="card_image filter_contrast" src="./images/card_image/card_image.png" alt="Картинка автобуса среди леса, с эффектом контраста" loading="lazy">
           <span class="card_label">&lt;/HTML&gt;</span>
         </div>
         <div class="card_section">
@@ -104,7 +107,7 @@
       <article class="card_list">
         <h2 class="card_title">1 спринт: А если не получится?</h2>
         <div class="card_list_image">
-          <img class="card_image filter_three" src="./images/card_image/card_image.png" alt="Картинка автобуса среди леса, с эффектом поворта оттенка">
+          <img class="card_image filter_hue-rotate" src="./images/card_image/card_image.png" alt="Картинка автобуса среди леса, с эффектом поворта оттенка" loading="lazy">
           <span class="card_label">&lt;CSS&gt;</span>
         </div>
         <div class="card_section">
@@ -130,7 +133,7 @@
       <article class="card_list">
         <h2 class="card_title">2 спринт: Погоня за идеалом</h2>
         <div class="card_list_image">
-          <img class="card_image filter_four" src="./images/card_image/card_image.png" alt="Картинка автобуса среди леса, с эффектом насыщенности">
+          <img class="card_image filter_saturate" src="./images/card_image/card_image.png" alt="Картинка автобуса среди леса, с эффектом насыщенности" loading="lazy">
           <span class="card_label">&lt;desigions&gt;</span>
         </div>
         <div class="card_section">
@@ -156,7 +159,7 @@
       <article class="card_list">
         <h2 class="card_title">2 спринт: О тех, кто рядом</h2>
         <div class="card_list_image">
-          <img class="card_image filter_five" src="./images/card_image/card_image.png" alt="Картинка автобуса среди леса, с эффектом сепии">
+          <img class="card_image filter_sepia" src="./images/card_image/card_image.png" alt="Картинка автобуса среди леса, с эффектом сепии" loading="lazy">
           <span class="card_label">care</span>
         </div>
         <div class="card_section">
@@ -182,7 +185,7 @@
       <article class="card_list">
         <h2 class="card_title">3 спринт: Обходные стратегии</h2>
         <div class="card_list_image">
-          <img class="card_image filter_six" src="./images/card_image/card_image.png" alt="Картинка автобуса среди леса, с эффектом инверсии">
+          <img class="card_image filter_invert" src="./images/card_image/card_image.png" alt="Картинка автобуса среди леса, с эффектом инверсии" loading="lazy">
           <span class="card_label">&lt;support&gt;</span>
         </div>
         <div class="card_section">
@@ -208,7 +211,7 @@
       <article class="card_list">
         <h2 class="card_title">3 спринт: Когда опускаются руки</h2>
         <div class="card_list_image">
-          <img class="card_image filter_seven" src="./images/card_image/card_image.png" alt="Картинка автобуса среди леса, с эффектом увеличения якрости">
+          <img class="card_image filter_brightness" src="./images/card_image/card_image.png" alt="Картинка автобуса среди леса, с эффектом увеличения якрости" loading="lazy">
           <span class="card_label">&lt;lifes-style: none;&gt;</span>
         </div>
         <div class="card_section">
@@ -234,7 +237,7 @@
       <article class="card_list">
         <h2 class="card_title">«Сейчас я здесь»</h2>
         <div class="card_list_image">
-          <img class="card_image filter_eight" src="./images/card_image/card_image.png" alt="Картинка автобуса среди леса, с эффектами размытия, сепии и инверсии">
+          <img class="card_image filter_several" src="./images/card_image/card_image.png" alt="Картинка автобуса среди леса, с эффектами размытия, сепии и инверсии" loading="lazy">
           <span class="card_label">&lt;experience&gt;</span>
         </div>
         <div class="card_section">
@@ -257,8 +260,8 @@
           </button>
         </div>
       </article>
-    </main>
-    <footer class="footer">
+    </section>
+    <section class="footer">
       <button 
         type="button" 
         onclick="window['dialog-id'].showModal()"
@@ -269,10 +272,9 @@
           <svg class="footer_floppy" viewBox="0 0 28 28">
             <use href="./svg/floppy.svg#floppy" />
           </svg>
-          Сохранить на память
+          Сохранить на&nbsp;память
         </span>
       </button>
-    </footer>
     <dialog id="dialog-id" class="dialog">
       <div class="dialog_menu">
         <svg class="dialog_floppy" viewBox="0 0 28 28">
@@ -289,6 +291,8 @@
         </button>
         </form>
     </dialog>
+  </section>
+  </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

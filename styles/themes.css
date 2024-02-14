@@ -40,7 +40,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --accent-color: #00CC14;
-    --accent-color-two: #fff;
+    --accent-color-two: #00CC14;
     --background-color: #000;
     --border-color: #00CC14;
     --heart-blackgreen: #00CC14;

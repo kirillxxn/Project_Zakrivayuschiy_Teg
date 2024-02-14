@@ -1,9 +1,12 @@
 /* Начало основного блока мобильной версии */
+* { outline: 1px solid white; }
 .page {
-  display: grid;
+  margin: 0 auto;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  background-image: var(--background-image);
+  background-image: var(--background-image, repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
+  repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
+  linear-gradient(#e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%));
   background-size: cover;
   background-attachment: fixed;
   padding-block-start: 100px;
@@ -15,28 +18,31 @@
   border: var(--border-size, 2px) var(--border-color, #000) solid;
   margin-block-end: 102px;
 }
-
-.title_section {
+.header_menu{
+  padding-block-start: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 21px;
+}
+.title_section {
   font-family: var(--font-family-PS2P, 'Press Start 2P', sans-serif);
   font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
-  font-variation-settings: 'wght' var(--font-weight-normal,400);
+  font-weight: var(--font-weight-normal);
   line-height: 14px;
   letter-spacing: 0em;
   text-transform: uppercase;
-  padding-block-start: 120px;
   margin-block-end: 23px;
 
 }
 
-.title {
-  font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
-  font-variation-settings: 'wght' var(--font-weight-normal,400);
+.logo {
+  font-family: var(--font-family-PS2P, 'Press Start 2P', sans-serif);
+  font-size: clamp(2.813rem, 1.813rem + 5.389vw, 4.063rem);
+  font-weight: var(--font-weight-normal);
   line-height: 49px;
   letter-spacing: 0em;
+  text-transform: uppercase;
 }
 
 .header__theme-menu {
@@ -53,7 +59,7 @@
 .theme-menu__button {
   font-family: var(--font-family-PS2P, 'Press Start 2P', sans-serif);
   font-size: 14px;
-  font-variation-settings: 'wght' var(--font-weight-normal,400);
+  font-weight: var(--font-weight-normal);
   line-height: 14px;
   letter-spacing: 0em;
   text-transform: uppercase;
@@ -64,11 +70,12 @@
 }
 
 .container {
-  display: grid;
-  gap: 51px;
   color: var(--accent-color, #000);
 }
-
+.card_list_section{
+  display: grid;
+  gap: 48px;
+}
 .card_list {
   display: grid;
   border: var(--border-size, 2px) var(--border-color, #000) solid;
@@ -107,7 +114,7 @@
   color: #000;
   font-family: var(--font-family-PS2P, 'Press Start 2P', sans-serif);
   font-size: 14px;
-  font-variation-settings: 'wght' var(--font-weight-normal,400);
+  font-weight: var(--font-weight-normal);
   line-height: 14px;
   letter-spacing: 0em;
   text-align: left;
@@ -144,11 +151,12 @@
 
 .card__buttons {
   display: flex;
+  align-items: flex-start;
   background-color: var(--background-color, #fff);
   justify-content: flex-end;
   padding: 0 23px 23px;
-  gap: 8px;
-
+  gap: 7px;
+  
 }
 
 .card__icon-button {
@@ -156,6 +164,9 @@
   border: 2px solid transparent;
   padding: 0px;
   transition: outline 0.3s ease;
+  display: flex;
+  justify-content:center;
+  align-items: center ;
 }
 
 
@@ -172,7 +183,7 @@
   position: relative;
   font-family: var(--font-family-PS2P, 'Press Start 2P', sans-serif);
   font-size: 14px;
-  font-variation-settings: 'wght' var(--font-weight-normal,400);
+  font-weight: var(--font-weight-normal);
   line-height: 13px;
   letter-spacing: 0em;
   text-align: left;
@@ -191,16 +202,17 @@
   mix-blend-mode: difference;
   color: var(--accent-color-two, #fff);
   transition: box-shadow 0.3s ease;
+  
 }
 
 .footer {
-  margin: 50px 32px 102px 34px;
+  margin: 49px 32px 108px 34px;
   background-color: var(--background-color, #fff);
 
 }
 
 .footer_button {
-  padding: 12px 17px;
+  padding: 12px 19px;
   border: var(--border-size, 2px) var(--accent-color-two, #fff) solid;
   position: relative;
   display: block;
@@ -255,7 +267,7 @@
   mix-blend-mode: difference;
   font-family: var(--font-family-PS2P, 'Press Start 2P', sans-serif);
   font-size: 14px;
-  font-variation-settings: 'wght' var(--font-weight-normal,400);
+  font-weight: var(--font-weight-normal);
   line-height: 21px;
   letter-spacing: 0em;
 
@@ -285,35 +297,35 @@
 /* Конец основного блока мобильной версии */
 
 /* Начало блока с фильтрами карточек */
-.filter_one {
+.filter_grayscale {
   filter: grayscale(0.9);
 }
 
-.filter_two {
+.filter_contrast {
   filter: contrast(50)
 }
 
-.filter_three {
+.filter_hue-rotate {
   filter: hue-rotate(-90deg);
 }
 
-.filter_four {
+.filter_saturate {
   filter: saturate(200%);
 }
 
-.filter_five {
+.filter_sepia {
   filter: sepia(2);
 }
 
-.filter_six {
+.filter_invert {
   filter: invert(1);
 }
 
-.filter_seven {
+.filter_brightness {
   filter: brightness(3);
 }
 
-.filter_eight {
+.filter_several {
   filter: blur(4px) sepia(1) invert(2);
 }
 
@@ -346,7 +358,6 @@
 
 .button:hover {
   color: var(--accent-color-two, #fff);
-  transition: color 0.3s ease-in-out;
 }
 
 .button::before {
@@ -370,7 +381,7 @@
 }
 
 .dialog::backdrop {
-  background-color: rgb(0 0 0 / 0.7);
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 /* Конец блока с псевдоэлементами и псевдоклассами */
@@ -379,15 +390,15 @@
   .page {
     max-width: 700px;
   }
-
-  .title_section {
+  .header_menu{
     padding-block-start: 136px;
+  }
+  .title_section {
     font-size: 23px;
     line-height: 23px;
   }
 
-  .title {
-    font-size: 65px;
+  .logo {
     line-height: 65px;
   }
 
