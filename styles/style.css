@@ -1,15 +1,15 @@
 /* Начало основного блока мобильной версии */
-* { outline: 1px solid white; }
 .page {
   margin: 0 auto;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   background-image: var(--background-image, repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
-  repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
-  linear-gradient(#e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%));
+      repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
+      linear-gradient(#e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%));
   background-size: cover;
   background-attachment: fixed;
   padding-block-start: 100px;
+  font-variation-settings: "wght" var(--font-weight-normal, 400);
 }
 
 .header {
@@ -17,18 +17,20 @@
   background-color: var(--background-color, #fff);
   border: var(--border-size, 2px) var(--border-color, #000) solid;
   margin-block-end: 102px;
+  font-weight: var(--font-weight-normal, 400);
 }
-.header_menu{
+
+.header_menu {
   padding-block-start: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 21px;
 }
+
 .title_section {
   font-family: var(--font-family-PS2P, 'Press Start 2P', sans-serif);
-  font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
-  font-weight: var(--font-weight-normal);
+  font-size: clamp(0.395rem, 0.72rem + 0.672vw, 1.438rem);
   line-height: 14px;
   letter-spacing: 0em;
   text-transform: uppercase;
@@ -39,7 +41,6 @@
 .logo {
   font-family: var(--font-family-PS2P, 'Press Start 2P', sans-serif);
   font-size: clamp(2.813rem, 1.813rem + 5.389vw, 4.063rem);
-  font-weight: var(--font-weight-normal);
   line-height: 49px;
   letter-spacing: 0em;
   text-transform: uppercase;
@@ -59,7 +60,6 @@
 .theme-menu__button {
   font-family: var(--font-family-PS2P, 'Press Start 2P', sans-serif);
   font-size: 14px;
-  font-weight: var(--font-weight-normal);
   line-height: 14px;
   letter-spacing: 0em;
   text-transform: uppercase;
@@ -72,10 +72,12 @@
 .container {
   color: var(--accent-color, #000);
 }
-.card_list_section{
+
+.card_list_section {
   display: grid;
-  gap: 48px;
+  gap: 50px;
 }
+
 .card_list {
   display: grid;
   border: var(--border-size, 2px) var(--border-color, #000) solid;
@@ -85,7 +87,7 @@
 .card_title {
   font-family: var(--font-family-Inter, 'Inter', sans-serif);
   font-size: 18px;
-  font-variation-settings: 'wght' var(--font-weight-bold,700);
+  font-variation-settings: 'wght' var(--font-weight-bold, 700);
   line-height: 22px;
   letter-spacing: 0em;
   text-align: left;
@@ -114,7 +116,6 @@
   color: #000;
   font-family: var(--font-family-PS2P, 'Press Start 2P', sans-serif);
   font-size: 14px;
-  font-weight: var(--font-weight-normal);
   line-height: 14px;
   letter-spacing: 0em;
   text-align: left;
@@ -133,7 +134,7 @@
 .card_section {
   display: flex;
   flex-direction: column;
-  padding: 23px 25px 26px;
+  padding: 25px 25px 26px;
   gap: 27px;
   background-color: var(--background-color, #fff);
   border-top: var(--border-size, 2px) var(--border-color, #000) solid;
@@ -143,7 +144,6 @@
 .card_text {
   font-family: var(--font-family-Inter, 'Inter', sans-serif);
   font-size: 18px;
-  font-variation-settings: 'wght' var(--font-weight-normal,400);
   line-height: 21px;
   letter-spacing: 0em;
   text-align: left;
@@ -156,7 +156,7 @@
   justify-content: flex-end;
   padding: 0 23px 23px;
   gap: 7px;
-  
+
 }
 
 .card__icon-button {
@@ -165,8 +165,8 @@
   padding: 0px;
   transition: outline 0.3s ease;
   display: flex;
-  justify-content:center;
-  align-items: center ;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -183,7 +183,6 @@
   position: relative;
   font-family: var(--font-family-PS2P, 'Press Start 2P', sans-serif);
   font-size: 14px;
-  font-weight: var(--font-weight-normal);
   line-height: 13px;
   letter-spacing: 0em;
   text-align: left;
@@ -202,17 +201,17 @@
   mix-blend-mode: difference;
   color: var(--accent-color-two, #fff);
   transition: box-shadow 0.3s ease;
-  
+
 }
 
-.footer {
-  margin: 49px 32px 108px 34px;
+.under {
+  margin: 49px 32px 100px 34px;
   background-color: var(--background-color, #fff);
 
 }
 
-.footer_button {
-  padding: 12px 19px;
+.under_button {
+  padding: 13px 19px;
   border: var(--border-size, 2px) var(--accent-color-two, #fff) solid;
   position: relative;
   display: block;
@@ -221,7 +220,7 @@
 
 }
 
-.footer_floppy {
+.under_floppy {
   mix-blend-mode: difference;
   block-size: 28px;
   inline-size: 28px;
@@ -235,12 +234,16 @@
 }
 
 .dialog {
+  position: fixed;
+  inset: 0;
   max-inline-size: 336px;
   border: var(--border-size, 2px) var(--accent-color-two, #fff) solid;
   display: grid;
   gap: 30px;
+  transition: opacity 0.3s ease-in-out;
   background-color: var(--background-color, #fff);
   padding: 30px 34px 28px 40px;
+  align-items: center;
   color: var(--accent-color-two, #fff);
 }
 
@@ -267,7 +270,7 @@
   mix-blend-mode: difference;
   font-family: var(--font-family-PS2P, 'Press Start 2P', sans-serif);
   font-size: 14px;
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal, 400);
   line-height: 21px;
   letter-spacing: 0em;
 
@@ -390,11 +393,12 @@
   .page {
     max-width: 700px;
   }
-  .header_menu{
+
+  .header_menu {
     padding-block-start: 136px;
   }
+
   .title_section {
-    font-size: 23px;
     line-height: 23px;
   }
 
@@ -407,17 +411,17 @@
     right: 25px;
   }
 
-  .footer {
+  .under {
     margin: 50px 181px 107px 180px;
 
   }
 
-  .footer_button {
+  .under_button {
     padding: 14px 19px;
 
   }
 
-  .footer_floppy {
+  .under_floppy {
     block-size: 21px;
     inline-size: 21px;
   }
@@ -428,13 +432,13 @@
   }
 
 
-.dialog {
-  max-inline-size: 357px
-}
+  .dialog {
+    max-inline-size: 357px
+  }
 
-.button_ok {
-  width: 279px;
-}
+  .button_ok {
+    width: 279px;
+  }
 }
 
 /* Конец адаптивного блока */
