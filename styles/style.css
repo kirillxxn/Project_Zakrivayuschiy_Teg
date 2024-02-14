@@ -35,7 +35,6 @@
   letter-spacing: 0em;
   text-transform: uppercase;
   margin-block-end: 23px;
-
 }
 
 .logo {
@@ -76,6 +75,7 @@
 .card_list_section {
   display: grid;
   gap: 50px;
+  padding-block-end: 50px;
 }
 
 .card_list {
@@ -156,7 +156,6 @@
   justify-content: flex-end;
   padding: 0 23px 23px;
   gap: 7px;
-
 }
 
 .card__icon-button {
@@ -168,7 +167,6 @@
   justify-content: center;
   align-items: center;
 }
-
 
 .like-icon {
   cursor: pointer;
@@ -191,33 +189,29 @@
 
 .button {
   cursor: pointer;
-  border: var(--border-size, 2px) var(--accent-color-two, #fff) solid;
-  background-color: var(--button-bg-two, #000);
+  border: var(--border-size, 2px) var(--border-color, #000) solid;
+  background-color: var(--button-bg-one, #fff);
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
-  mix-blend-mode: difference;
-  color: var(--accent-color-two, #fff);
+  color: var(--accent-color-two, #000);
   transition: box-shadow 0.3s ease;
-
 }
 
 .under {
-  margin: 49px 32px 100px 34px;
-  background-color: var(--background-color, #fff);
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .under_button {
   padding: 13px 19px;
-  border: var(--border-size, 2px) var(--accent-color-two, #fff) solid;
   position: relative;
   display: block;
   overflow: hidden;
   transition: box-shadow 0.3s ease;
-
 }
 
 .under_floppy {
@@ -256,14 +250,12 @@
   display: flex;
   align-items: center;
   gap: 19px;
-
 }
 
 .dialog_floppy {
   mix-blend-mode: difference;
   min-inline-size: 39px;
   block-size: 39px;
-
 }
 
 .dialog_text {
@@ -273,11 +265,8 @@
   font-weight: var(--font-weight-normal, 400);
   line-height: 21px;
   letter-spacing: 0em;
-
   text-transform: uppercase;
-
 }
-
 
 .button_ok {
   width: 257px;
@@ -289,7 +278,6 @@
   padding: 10.5px 0px;
   background-color: transparent;
   border: var(--border-size, 2px) var(--accent-color-two, #fff) solid;
-
 }
 
 .button_key_ok {
@@ -298,7 +286,6 @@
 }
 
 /* Конец основного блока мобильной версии */
-
 /* Начало блока с фильтрами карточек */
 .filter_grayscale {
   filter: grayscale(0.9);
@@ -333,7 +320,6 @@
 }
 
 /* Конец блока с фильтрами карточек */
-
 /* Начало блока с псевдоэлементами и псевдоклассами */
 .theme-menu__button:hover {
   opacity: 0.6;
@@ -370,7 +356,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background-color: var(--button-bg-one, #fff);
+  background-color: var(--button-bg-two, #000);
   transition: 0.3s ease-in-out;
 }
 
@@ -410,15 +396,8 @@
     top: 27px;
     right: 25px;
   }
-
-  .under {
-    margin: 50px 181px 107px 180px;
-
-  }
-
   .under_button {
     padding: 14px 19px;
-
   }
 
   .under_floppy {
@@ -428,9 +407,7 @@
 
   .footer_menu {
     flex-direction: row;
-
   }
-
 
   .dialog {
     max-inline-size: 357px
