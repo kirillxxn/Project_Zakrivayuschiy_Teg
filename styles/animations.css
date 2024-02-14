@@ -34,33 +34,7 @@
 }
 
 /*  Начало блока анимации стрелки в главном меню */
-.theme-menu__button:disabled::before {
-  content: "▶";
-  position: absolute;
-  animation: pointer 0.5s ease-in-out alternate infinite;
-  left: -12px;
-}
 
-.theme-menu__button:focus-visible {
-  opacity: 0.6;
-  transform: 0.3s ease;
-}
-
-.theme-menu__button:not(:disabled)::after {
-  content: "";
-  display: block;
-  background: currentColor;
-  transition: 0.3s ease;
-  transform: scaleX(0);
-  transform-origin: left;
-  height: 2px;
-  opacity: 0.6;
-}
-
-.theme-menu__button:focus-visible::after {
-  opacity: 0.6;
-  transform: scaleX(1);
-}
 
 /*  Конец блока анимации стрелки в главном меню */
 
@@ -125,12 +99,12 @@
 
 .like-icon.is-liked .heart_body {
   fill: red;
-  transition: fill 0.3s linear;
+  transition: fill 0.3s linear linear 0.05s;
 }
 
 .like-icon.is-liked .heart_contour {
   fill: red;
-  transition: fill 0.6s linear
+  transition: fill 0.3s linear 0.05s
 }
 
 .like-icon.is-liked .heart {

@@ -3,13 +3,13 @@
   margin: 0 auto;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-color: var(--background-color, #fff);
   background-image: var(--background-image, repeating-linear-gradient(#d3d3d3 0 2px, transparent 2px 4px),
       repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
       linear-gradient(#e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%));
   background-size: cover;
   background-attachment: fixed;
   padding-block-start: 100px;
-  font-variation-settings: "wght" var(--font-weight-normal, 400);
 }
 
 .header {
@@ -17,7 +17,7 @@
   background-color: var(--background-color, #fff);
   border: var(--border-size, 2px) var(--border-color, #000) solid;
   margin-block-end: 102px;
-  font-weight: var(--font-weight-normal, 400);
+
 }
 
 .header_menu {
@@ -26,15 +26,17 @@
   flex-direction: column;
   align-items: center;
   gap: 21px;
+
 }
 
 .title_section {
   font-family: var(--font-family-PS2P, 'Press Start 2P', sans-serif);
-  font-size: clamp(0.395rem, 0.72rem + 0.672vw, 1.438rem);
+  font-size: clamp(0.195rem, 0.49rem + 1.672vw, 1.438rem);
   line-height: 14px;
   letter-spacing: 0em;
   text-transform: uppercase;
   margin-block-end: 23px;
+  font-weight: 400;
 }
 
 .logo {
@@ -66,9 +68,11 @@
   border: none;
   position: relative;
   transition: opacity 0.3s ease;
+  transform: 0.3s ease;
 }
 
 .container {
+  font-variation-settings: "wght" var(--font-weight-normal);
   color: var(--accent-color, #000);
 }
 
@@ -87,12 +91,12 @@
 .card_title {
   font-family: var(--font-family-Inter, 'Inter', sans-serif);
   font-size: 18px;
-  font-variation-settings: 'wght' var(--font-weight-bold, 700);
+  font-variation-settings: 'wght' var(--font-weight-bold);
   line-height: 22px;
   letter-spacing: 0em;
   text-align: left;
   background-color: var(--background-color, #fff);
-  padding: 4px 10px;
+  padding: 4px 8px;
   border-bottom: var(--border-size, 2px) var(--border-color, #000) solid;
   ;
 }
@@ -112,6 +116,7 @@
 .card_label {
   top: 25px;
   right: 10px;
+  opacity: 0.5;
   position: absolute;
   color: #000;
   font-family: var(--font-family-PS2P, 'Press Start 2P', sans-serif);
@@ -119,14 +124,14 @@
   line-height: 14px;
   letter-spacing: 0em;
   text-align: left;
-  text-shadow: 0 0 2px #fff;
+  text-shadow: 0 0 1px #fff;
   mix-blend-mode: hard-light;
 }
 
-@supports ((text-stroke: 1px var(--border-label-color, #fff)) or (-webkit-text-stroke: 0.3px var(--border-label-color, #fff))) {
+@supports ((text-stroke: 1px var(--border-label-color, #fff)) or (-webkit-text-stroke: 1px var(--border-label-color, #fff))) {
   .card_label {
-    -webkit-text-stroke: 0.3px var(--border-label-color, #fff);
-    text-stroke: 0.3px var(--border-label-color, #fff);
+    -webkit-text-stroke: 1px var(--border-label-color, #fff);
+    text-stroke: 1px var(--border-label-color, #fff);
     text-shadow: none;
   }
 }
@@ -338,6 +343,35 @@
   pointer-events: none;
 }
 
+.theme-menu__button:not(:disabled)::after {
+  content: "";
+  display: block;
+  background: currentColor;
+  transition: 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+  height: 2px;
+  opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible::after {
+  opacity: 0.6;
+  transform: scaleX(1);
+}
+
+.theme-menu__button:disabled::before {
+  content: "▶";
+  position: absolute;
+  animation: pointer 0.5s ease-in-out alternate infinite;
+  top: 0;
+  left: -12px;
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
+
+}
+
 .card__icon-button:focus-visible {
   border-color: var(--border-color, #000);
 }
@@ -397,6 +431,7 @@
     top: 27px;
     right: 25px;
   }
+
   .under_button {
     padding: 14px 19px;
   }

@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: Inter;
   src: local("Inter"),
@@ -12,6 +11,12 @@
   font-family: 'Press Start 2P';
   src: local("PressStart2P-Regular"),
     url(./PressStart2P-Regular.woff) format("woff2");
-  font-weight: normal;
+  font-weight: 400;
   font-display: swap;
+}
+
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: 'Inter-Variable', sans-serif;
+  }
 }

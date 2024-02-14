@@ -7,6 +7,8 @@
     --border-label-color: #fff;
     --border-transparent: transparent;
     --border-size: 2px;
+    --font-weight-bold: 700;
+    --font-weight-normal: 400;
     --button-bg-one: #fff;
     --button-bg-two: #000;
     --font-family-Inter: Inter, sans-serif;
@@ -27,6 +29,8 @@
   --border-label-color: #fff;
   --border-transparent: transparent;
   --border-size: 2px;
+  --font-weight-bold: 700;
+  --font-weight-normal: 400;
   --button-bg-one: #fff;
   --button-bg-two: #000;
   --font-family-Inter: Inter, sans-serif;
@@ -43,6 +47,8 @@
     --accent-color-two: #00CC14;
     --background-color: #000;
     --border-color: #00CC14;
+    --font-weight-bold: 785;
+    --font-weight-normal: 465;
     --heart-blackgreen: #00CC14;
     --button-bg-one: #000;
     --button-bg-two: #00CC14;
@@ -58,6 +64,8 @@
   --accent-color-two: #00CC14;
   --background-color: #000;
   --border-color: #00CC14;
+  --font-weight-bold: 785;
+  --font-weight-normal: 465;
   --heart-blackgreen: #00CC14;
   --button-bg-one: #000;
   --button-bg-two: #00CC14;
